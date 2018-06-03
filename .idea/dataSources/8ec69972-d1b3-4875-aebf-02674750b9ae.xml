@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="agile_parser@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="agile_parser">
+      <ObjectId>32825</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12292</ObjectId>
+    </database>
+    <database id="4" parent="1" name="YMS_Product">
+      <ObjectId>16385</ObjectId>
+    </database>
+    <database id="5" parent="1" name="test_product">
+      <ObjectId>16849</ObjectId>
+    </database>
+    <database id="6" parent="1" name="mthread_lab">
+      <ObjectId>32821</ObjectId>
+    </database>
+    <role id="7" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <role id="13" parent="1" name="valera">
+      <ObjectId>16384</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <ValidUntil>infinity</ValidUntil>
+    </role>
+    <schema id="14" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-06-03.21:03:31.402</IntrospectionTimestamp>
+      <IntrospectionStateNumber>63153</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="15" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="information_schema">
+      <ObjectId>12002</ObjectId>
+    </schema>
+    <sequence id="20" parent="14" name="native">
+      <ObjectId>32871</ObjectId>
+      <StateNumber>63150</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="21" parent="14" name="attributes">
+      <ObjectId>32873</ObjectId>
+      <StateNumber>63153</StateNumber>
+    </table>
+    <table id="22" parent="14" name="buttons">
+      <ObjectId>32881</ObjectId>
+      <StateNumber>63153</StateNumber>
+    </table>
+    <column id="23" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>63151</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="24" parent="21" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>63151</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="25" parent="21" name="value">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>63151</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="26" parent="21" name="button_id">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>63151</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="27" parent="21" name="attributes_pkey">
+      <ObjectId>32879</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="21" name="attributes_pkey">
+      <ObjectId>32880</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>attributes_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="29" parent="21" name="fkg1n60khnacsjm6u53idvelk0o">
+      <ObjectId>32886</ObjectId>
+      <ColNames>button_id</ColNames>
+      <RefTableId>32881</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>buttons</RefTableName>
+      <RefKeyName>buttons_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="30" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>63152</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="31" parent="22" name="number_of_attributes">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>63152</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="32" parent="22" name="right_id">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>63152</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="33" parent="22" name="buttons_pkey">
+      <ObjectId>32884</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="22" name="buttons_pkey">
+      <ObjectId>32885</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>buttons_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
